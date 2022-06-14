@@ -78,6 +78,8 @@ go_compile() {
     export GO_GCFLAGS="${HOST_CFLAGS}"
     export GO_LDFLAGS="${HOST_LDFLAGS}"
 
+    export GO111MODULE="off"
+
     set > ${WORKDIR}/go-${PV}.env
     cd ${WORKDIR}/go-${PV}/go/src && bash -x ./make.bash
 
